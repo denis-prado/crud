@@ -18,15 +18,16 @@ if ($_POST)
 	$menssagem .= "<div class='sucesso'>";
 	$menssagem .= "<h2>Dados inseridos com sucesso!</h2>";
 
-	$menssagem .= "<div class='conteudo-sucesso'>";
+	$menssagem .= "<div class='menssagem'>";
 	$menssagem .= "<ul>";
 	$menssagem .= "<li>Nome: <strong>".$nome."</strong></li>";
 	$menssagem .= "<li>Preço <strong>R$ ".number_format($preco, 2, ',', '.')."</strong></li>";
 	$menssagem .= "</ul>";
 	$menssagem .= "</div>";
 
-	$menssagem .= "<div class=''>";
-	$menssagem .= "<a class='btn-2' href='index.php'>Ok</a>";
+	$menssagem .= "<div class='rodape'>";
+	$menssagem .= "<a class='btn' href='view_adicionar.php'>Ok</a>";
+	$menssagem .= "</div>";
 	$menssagem .= "</div>";
 
 	$stmt->close();
