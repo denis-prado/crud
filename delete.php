@@ -13,5 +13,5 @@ if ($_GET){
 
 	$stmt->close();
 
-	header('location: index.php');
+	header('location: view_listar.php');
 }
