@@ -1,0 +1,59 @@
+<?php
+
+$conn = require('connection.php');
+
+if ($_GET){
+
+	$id = $_GET['alt'];
+
+	$sql = 'SELECT * FROM produtos WHERE id = ?';
+
+	$stmt = $conn->prepare($sql);
+	$stmt->bind_param('i', $id);
+	$stmt->execute();
+
+	$result = $stmt->get_result();
+
+	$busca = $result->fetch_array(MYSQLI_ASSOC);
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="listar">
+		<div class="titulo-lista">
+			<h2>Alteração de item</h2>
+		</div>
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Nome</th>
+				<th>Preço R$</th>
+				<th>Ação</th>
+			</tr>
+			<tr>
+				<form action="alterar.php" method="POST">
+					<td><input class="input" type="number" name="id" value="<?php echo $busca['id'] ?>" readonly="true" /></p></td>
+
+					<td><input class="input" type="text" name="nome" value="<?php echo $busca['nome'] ?>"></td>
+
+					<td><input class="input" type="number" step="any"  name="preco" value="<?php echo $busca['preco'] ?>"></td>
+
+					<td><input class="alterar" type="submit" value="Alterar"></td>
+				</form>
+			</tr>
+		</table>
+		<div class="grupo-btn">
+			<a class="btn esquerda" href="view_listar.php">Voltar</a>
+		</div>
+	</div>
+	
+</body>
+</html>
