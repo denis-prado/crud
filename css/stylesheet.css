@@ -213,11 +213,12 @@ input[type=number] {
 
 /*-------------------SUCESSO-------------------*/
 .sucesso{
-	width: 500px;
-	height: 500px;
-    background: gray;
-    margin: 0 auto;
-    padding-top: 50px;
+	max-width: 500px;
+    margin: 50px auto;
+    padding: 0 0 30px 0;
+    border-radius: 12px;
+    border-width: thin;
+    border-style: solid;
 }
 
 .sucesso h2{
@@ -227,28 +228,24 @@ input[type=number] {
 	background-color: black;
 	color: white;
 	padding: 20px 0;
+	border-radius: 10px 10px 0 0;
 }
 
-.sucesso ul{
+.menssagem{
+	width: 70%;
 	border-radius: 10px;
-	background-color: rgba(35, 142, 35, 0.8);
+	background-color: rgba(35, 142, 35, 0.6);
 	padding: 20px 0;
-	margin: 0 30px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .sucesso ul li{
 	list-style: none;
-	padding: 10px 30px;
-	margin: 0 20px;
-
+	padding: 10px 0;
 }
 
-.btn-2{
-	display: inline-block;
-	width: 200px;
-	height: 50px;
-	text-decoration: none;
-	padding: 0 5px;
-	background-color: black;
-	color: white;
+.rodape{
+	width: 70%;
+	margin: 40px auto 0 auto;
 }
