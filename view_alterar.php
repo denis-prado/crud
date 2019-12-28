@@ -42,9 +42,9 @@ if ($_GET){
 				<form action="alterar.php" method="POST">
 					<td><input class="input" type="number" name="id" value="<?php echo $busca['id'] ?>" readonly="true" /></p></td>
 
-					<td><input class="input" type="text" name="nome" value="<?php echo $busca['nome'] ?>"></td>
+					<td><input class="input" type="text" name="nome" value="<?php echo $busca['nome'] ?>" autocomplete="off" /></td>
 
-					<td><input class="input" type="number" step="any"  name="preco" value="<?php echo $busca['preco'] ?>"></td>
+					<td><input class="input" type="number" step="any"  name="preco" value="<?php echo $busca['preco'] ?>" autocomplete="off" /></td>
 
 					<td><input class="alterar" type="submit" value="Alterar"></td>
 				</form>
