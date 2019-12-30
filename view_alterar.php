@@ -2,6 +2,8 @@
 
 $conn = require('connection.php');
 
+$menssagem = "";
+
 if ($_GET){
 
 	$id = $_GET['alt'];
@@ -15,8 +17,16 @@ if ($_GET){
 	$result = $stmt->get_result();
 
 	$busca = $result->fetch_array(MYSQLI_ASSOC);
-}
 
+	$stmt->close();
+
+}
+else
+{
+	$menssagem .= "<div class='erro'>";
+	$menssagem .= "<h2>Erro ao inserir os dados!</h2>";
+	$menssagem .= "</div>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +34,7 @@ if ($_GET){
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/stylesheet.css">
-	<title>Document</title>
+	<title>Alteração de item</title>
 </head>
 <body>
 	<div class="listar">
@@ -54,6 +64,10 @@ if ($_GET){
 			<a class="btn esquerda" href="view_listar.php">Voltar</a>
 		</div>
 	</div>
-	
+
+	<?php
+		echo $menssagem;
+	?>
+
 </body>
 </html>

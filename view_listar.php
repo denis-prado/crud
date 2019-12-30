@@ -18,7 +18,7 @@ $produtos = $busca->fetch_all(MYSQLI_ASSOC);
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/stylesheet.css">
-	<title>Document</title>
+	<title>Listagem de Produtos</title>
 </head>
 <body>
 	<div class="listar">
@@ -44,7 +44,6 @@ $produtos = $busca->fetch_all(MYSQLI_ASSOC);
 		</table>
 		<div class="grupo-btn">
 			<a class="btn esquerda" href="index.php">Voltar</a>
-			<a class="btn direita"  href="#">Avançar</a>
 		</div>
 	</div>
 </body>

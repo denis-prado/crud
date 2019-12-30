@@ -212,7 +212,8 @@ input[type=number] {
 }
 
 /*-------------------SUCESSO-------------------*/
-.sucesso{
+.sucesso,
+.erro{
 	max-width: 500px;
     margin: 50px auto;
     padding: 0 0 30px 0;
@@ -221,7 +222,8 @@ input[type=number] {
     border-style: solid;
 }
 
-.sucesso h2{
+.sucesso h2,
+.erro h2{
 	margin-bottom: 30px;
 	text-transform: uppercase;
 	text-align: center;
@@ -231,13 +233,17 @@ input[type=number] {
 	border-radius: 10px 10px 0 0;
 }
 
-.menssagem{
+.menssagem-sucesso,
+.menssagem-erro{
 	width: 70%;
 	border-radius: 10px;
-	background-color: rgba(35, 142, 35, 0.6);
 	padding: 20px 0;
 	text-align: center;
 	margin: 0 auto;
+}
+
+.menssagem-sucesso{
+	background-color: rgba(35, 142, 35, 0.6);
 }
 
 .sucesso ul li{
@@ -248,4 +254,8 @@ input[type=number] {
 .rodape{
 	width: 70%;
 	margin: 40px auto 0 auto;
+}
+
+.menssagem-erro{
+	background-color: rgba(255, 0, 0, 0.6);
 }

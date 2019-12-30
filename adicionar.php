@@ -7,6 +7,8 @@ if ($_POST)
 	$nome = $_POST['nome'];
 	$preco = $_POST['preco'];
 
+	if ()
+
 	$menssagem = "";
 
 	$sql = 'INSERT INTO produtos (nome, preco) VALUES ( ?, ?)';
@@ -38,7 +40,6 @@ else
 	$menssagem .= "<h2>Erro ao inserir os dados!</h2>";
 	$menssagem .= "</div>";
 }
-
 ?>
 
 <!DOCTYPE html>
