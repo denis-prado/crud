@@ -35,7 +35,7 @@ $produtos = $busca->fetch_all(MYSQLI_ASSOC);
  
 			<?php foreach ($produtos as $produto) { ?>
 			<tr>
-				<td><p class="id"><?php echo $produto['id'] ?></p></td>
+				<td><p class="id"><?php echo $produto['codigo'] ?></p></td>
 				<td><?php echo $produto['nome'] ?></td>
 				<td><?php echo number_format($produto['preco'], 2, ',', '.') ?></td>
 				<td><a class="alterar" href="view_alterar.php?alt=<?php echo $produto['id']; ?>">Alterar</a><a class="excluir" href="delete.php?del=<?php echo $produto['id']; ?>">Excluir</a></td>
