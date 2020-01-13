@@ -8,7 +8,7 @@ if ($_GET){
 
 	$id = $_GET['alt'];
 
-	$sql = 'SELECT * FROM produtos WHERE id = ?';
+	$sql = 'SELECT * FROM produtos WHERE codigo = ?';
 
 	$stmt = $conn->prepare($sql);
 	$stmt->bind_param('i', $id);
@@ -50,7 +50,7 @@ else
 			</tr>
 			<tr>
 				<form action="alterar.php" method="POST">
-					<td><input class="input" type="number" name="id" value="<?php echo $busca['id'] ?>" readonly="true" /></p></td>
+					<td><input class="input" type="number" name="codigo" value="<?php echo $busca['codigo'] ?>" readonly="true" /></p></td>
 
 					<td><input class="input" type="text" name="nome" value="<?php echo $busca['nome'] ?>" autocomplete="off" /></td>
 

@@ -4,7 +4,7 @@ $conn = require('connection.php');
 
 if($_POST){
 
-	$id = $_POST['id'];
+	$id = $_POST['codigo'];
 	$nome = $_POST['nome'];
 	$preco = $_POST['preco'];
 
@@ -12,7 +12,7 @@ if($_POST){
 
 	if(empty($id)==false && empty($nome)==false && empty($preco)==false)
 	{
-		$sql = 'UPDATE produtos SET nome=?, preco=? WHERE id=?';
+		$sql = 'UPDATE produtos SET nome=?, preco=? WHERE codigo=?';
 
 		$stmt = $conn->prepare($sql);
 		$stmt->bind_param('sdi', $nome, $preco, $id);
@@ -47,9 +47,7 @@ if($_POST){
 		$menssagem .= "</div>";
 		$menssagem .= "</div>";
 	}
-	
-
-} 
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +61,5 @@ if($_POST){
 	<?php 
 		echo $menssagem;
 	?>
-	
 </body>
 </html>
