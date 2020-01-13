@@ -28,8 +28,8 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="view_listar.php">Visualizar clientes</a></li>
-					<li><a href="view_adicionar.php">Cadastrar produtos</a></li>
+					<li><a href="#">Visualizar clientes</a></li>
+					<li><a href="#">Cadastrar produtos</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -40,8 +40,8 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="view_listar.php">Visualizar fornecedores</a></li>
-					<li><a href="view_adicionar.php">Cadastrar fornecedores</a></li>
+					<li><a href="#">Visualizar fornecedores</a></li>
+					<li><a href="#">Cadastrar fornecedores</a></li>
 				</ul>
 			</nav>
 		</div>
